@@ -13,7 +13,7 @@ else
     echo "* Installing Nginx, PHP, and MariaDB *"
     echo "**************************************"
 
-    sudo dnf install nginx php php-fpm php-common
+    sudo dnf install nginx php php-fpm php-common composer
     sudo dnf install php-pdo php-gd php-mbstring php-mcrypt php-xml
     sudo dnf install mariadb-server
 
