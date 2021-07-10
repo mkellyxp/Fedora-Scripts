@@ -32,8 +32,12 @@ else
     sudo chown -R $USER /var/www/html/
     sudo find /var/www/html -type d -exec chmod u+rwx {} +
     sudo find /var/www/html -type f -exec chmod u+rw {} +
-
     sudo find /var/www/html -type d -exec chmod g+s {} +
+
+    sudo chown -R $USER /usr/share/nginx/html/
+    sudo find /usr/share/nginx/html -type d -exec chmod u+rwx {} +
+    sudo find /usr/share/nginx/html -type f -exec chmod u+rw {} +
+    sudo find /usr/share/nginx/html -type d -exec chmod g+s {} +
 
     printf "<?php\n\techo phpinfo();\n?>" > /usr/share/nginx/html/info.php
 
