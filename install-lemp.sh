@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# check selinux 
+# Edit the /etc/selinux/config file as follows:
+# SELINUX=permissive
+
 if [ $USER == 'root' ]
 then
     echo ""
