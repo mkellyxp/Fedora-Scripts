@@ -1,8 +1,16 @@
 #!/bin/bash
 
-# check selinux 
+# To disable selinux enforcing
 # Edit the /etc/selinux/config file as follows:
 # SELINUX=permissive
+#
+# To allow certain folders
+# sudo semanage fcontext -a -t httpd_sys_rw_content_t '/var/www/html/uploads(/.*)?'
+# restorecon -R -v /var/www/html/uploads
+#
+# To look into what's upsetting selinux
+# journalctl -f
+
 
 if [ $USER == 'root' ]
 then
@@ -42,6 +50,10 @@ else
     sudo find /usr/share/nginx/html -type d -exec chmod u+rwx {} +
     sudo find /usr/share/nginx/html -type f -exec chmod u+rw {} +
     sudo find /usr/share/nginx/html -type d -exec chmod g+s {} +
+
+    # Selinux permissions
+    sudo setsebool httpd_can_network_connect_db 1
+    sudo setsebool -P httpd_can_network_connect_db 1
 
     printf "<?php\n\techo phpinfo();\n?>" > /usr/share/nginx/html/info.php
 
