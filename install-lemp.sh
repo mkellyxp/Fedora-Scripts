@@ -18,7 +18,7 @@ else
     echo "**************************************"
 
     sudo dnf install nginx php php-fpm php-common composer
-    sudo dnf install php-pdo php-gd php-mbstring php-mcrypt php-xml
+    sudo dnf install php-pdo php-gd php-mbstring php-mcrypt php-xml php-cli php-mysqlnd php-zip php-devel php-curl php-pear php-bcmath php-json
     sudo dnf install mariadb-server
 
     sudo systemctl enable nginx
