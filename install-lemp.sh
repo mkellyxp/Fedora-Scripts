@@ -52,8 +52,8 @@ else
     sudo find /usr/share/nginx/html -type d -exec chmod g+s {} +
 
     # Selinux permissions
-    sudo setsebool httpd_can_network_connect_db 1
-    sudo setsebool -P httpd_can_network_connect_db 1
+    sudo setsebool -P httpd_can_network_connect_db on
+    sudo setsebool -P httpd_can_network_connect on
 
     printf "<?php\n\techo phpinfo();\n?>" > /usr/share/nginx/html/info.php
 
