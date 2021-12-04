@@ -10,3 +10,4 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install org.gtk.Gtk3theme.Adwaita-dark
 
 sudo rpm-ostree install nodejs
+sudo rpm-ostree install podman-compose
