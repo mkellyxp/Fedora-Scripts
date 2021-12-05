@@ -11,3 +11,4 @@ flatpak install org.gtk.Gtk3theme.Adwaita-dark
 
 sudo rpm-ostree install nodejs
 sudo rpm-ostree install podman-compose
+sudo rpm-ostree install papirus-icon-theme
