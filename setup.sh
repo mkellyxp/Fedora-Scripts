@@ -14,3 +14,7 @@ sudo docker logs mysql1 2>&1 | grep GENERATED
 
 # Then Run
 # ALTER USER 'root'@'localhost' IDENTIFIED BY 'n3wj3rs3y';
+
+# dbeaver tips
+# local mysql client:  /var/lib/flatpak/runtime/io.dbeaver.DBeaverCommunity.Client.mariadb/x86_64/stable/active/files/bin
+# use 127.0.0.1 instead of localhost
